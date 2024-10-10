@@ -36,6 +36,18 @@
           </div>
         </div>
       </section>
+    <script>
+// JavaScript untuk menambahkan efek zoom pada gambar saat di-hover
+document.querySelectorAll('.zoom-img').forEach(function(img) {
+  img.addEventListener('mouseover', function() {
+    img.style.transform = 'scale(1.2)';
+    img.style.transition = 'transform 0.3s ease';
+  });
+  img.addEventListener('mouseout', function() {
+    img.style.transform = 'scale(1)';
+  });
+  });
+</script>
 
       <div class="container text-center">
         <div class="row">
