@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         cartElement.appendChild(totalElement);
     }
 });
-// script.js
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const orderButtons = document.querySelectorAll('.btn-sm');
@@ -86,22 +86,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.getElementById('paymentTotal').textContent = `Rp ${total.toLocaleString()}`;
         
-        // Tampilkan tombol bayar jika ada item di keranjang
+        
         const payButton = document.getElementById('payButton');
         if (payButton) {
             payButton.style.display = cart.length > 0 ? 'block' : 'none';
         }
     }
 
-    // Tambahkan event listener untuk tombol bayar
+    
     const payButton = document.getElementById('payButton');
     if (payButton) {
         payButton.addEventListener('click', function() {
             const paymentMethod = document.getElementById('paymentMethod').value;
             alert(`Pembayaran sebesar Rp ${total.toLocaleString()} dengan metode ${paymentMethod} berhasil!`);
-            // Di sini Anda bisa menambahkan logika untuk mengirim data pesanan ke server
-            cart.length = 0; // Kosongkan keranjang
-            updateCart(); // Perbarui tampilan keranjang
+            cart.length = 0; 
+            updateCart(); 
         });
     }
 });
